@@ -1,0 +1,82 @@
+﻿body {
+    font-size: small;
+}
+span {
+    width:5em; word-wrap:break-word
+
+}
+table{
+         width:315px;
+}
+.button{
+    background-color: lightgreen; /* Green */
+}
+th {
+    text-align: center;
+    background-color: lemonchiffon;
+    color: black;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 2px;
+}
+td {
+    white-space:nowrap;
+    background-clip:border-box;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 0px;
+}
+.tdq {
+    background-image:url('lightyellow.gif');
+    display:block;
+    background-repeat:repeat;
+    text-align: center;
+    border: 1px solid lightyellow;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 1px;
+}
+.tdstop {
+    background-image:url('lightred.gif');
+    display:block;
+    background-repeat:repeat;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 1px;
+}
+.tdon {
+    background-image:url('lightgreen.gif');
+    display:block;
+    background-repeat:repeat;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 1px;
+}
+.tdoff {
+    background-image:url('lightgrey.gif');
+    display:block;
+    background-repeat:repeat;
+    text-align: center;
+    border: 1px solid lightgray;
+    width: 15px;
+    font-family: Calibri;
+    height: 15px;
+    font-size: small;
+    padding: 1px;
+}

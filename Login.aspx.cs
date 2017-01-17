@@ -15,7 +15,10 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (User.Identity.IsAuthenticated == true)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
     }
     private MySqlConnection InitializeDB()
     {
@@ -121,6 +124,29 @@ public partial class Login : System.Web.UI.Page
 
     protected void Login1_LoggedIn(object sender, EventArgs e)
     {
+        //treat the case where we set the remember me check box
+        if (Login1.RememberMeSet)
+        {
+            //clear any other tickets that are already in the response
+            Response.Cookies.Clear();
+
+            //set the new expiry date – to thirty days from now
+            DateTime expiryDate = DateTime.Now.AddDays(30);
+
+            //create a new forms auth ticket
+            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(2, Login1.UserName,
+                DateTime.Now, expiryDate, true, String.Empty);
+
+            //encrypt the ticket
+            string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+
+            //create a new authentication cookie – and set its expiration date
+            HttpCookie authenticationCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+            authenticationCookie.Expires = ticket.Expiration;
+
+            //add the cookie to the response.
+            Response.Cookies.Add(authenticationCookie);
+        }
         Response.Redirect("~/Default.aspx");
     }
 }

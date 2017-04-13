@@ -663,9 +663,29 @@ public partial class GridViewEditCell : System.Web.UI.Page
         SendPlc(LRAddr, "on");
         SendPlc(LRAddr, "off");
     }
+    private void BedTime()
+    {
+        SendPlc(TessAddr, "on");
+        SendPlc(KirstyAddr, "on");
+        SendPlc(TessAddr, "off");
+        SendPlc(KirstyAddr, "off");
+        SendPlc(TessAddr, "on");
+        SendPlc(KirstyAddr, "on");
+        SendPlc(TessAddr, "off");
+        SendPlc(KirstyAddr, "off");
+        SendPlc(TessAddr, "on");
+        SendPlc(KirstyAddr, "on");
+        SendPlc(TessAddr, "off");
+        SendPlc(KirstyAddr, "off");
+    }
     protected void btnWine_Click(object sender, EventArgs e)
     {
         WineTime();
     }
     #endregion
+
+    protected void btnBedtime_Click(object sender, EventArgs e)
+    {
+        BedTime();
+    }
 }

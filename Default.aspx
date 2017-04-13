@@ -17,6 +17,7 @@
                 <asp:CheckBox ID="btnL3" runat="server" autopostback="true" BorderStyle="Solid" BorderWidth="1px" Font-Size="Small" OnCheckedChanged="btnL3_CheckedChanged" OnClick="btnL3_Click" text="Poppy Light" Width="97px" />
                 <br />
                 <asp:Button ID="btnL4" CssClass="button" runat="server" autopostback="true" BorderStyle="Solid" BorderWidth="1px" Font-Size="Small" OnClick="btnWine_Click" text="Wine Time" Width="97px" />
+                <asp:Button ID="btnBedtime" CssClass="button" runat="server" autopostback="true" BorderStyle="Solid" BorderWidth="1px" Font-Size="Small" OnClick="btnBedtime_Click" text="Bedtime" Width="97px" />
         <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#e9ecef" AutoGenerateColumns="False" 
             BorderStyle="None" BorderWidth="1px" CellPadding="4" HorizontalAlignment="stretch" ForeColor="Black" GridLines="Vertical"
             OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" ShowFooter="True">
